@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1 class="cover-heading">Рассчет времени и денег</h1>
+    <p class="lead">{{ context.name }}, столько вам надо зарабатывать, чтобы купить {{ context.calc_object }}</p>
+	<ol class="text-left">
+	<li>В год: <span>{{ context.year }} {% if context.forme %} ( из них {{ context.forme }} на свои нужды){% endif %}</span>  рублей</li>
+	<li>В месяц: <span>{{ context.month }}</span>  рублей</li>
+	<li>В день: <span>{{ context.day }}</span>  рублей</li>
+	<li>В час: <span>{{ context.hour }}</span>  рублей</li>
+	</ol>
+	{% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+	<p>В год ты тратишь на свои нужды: <span>{{ context.forme }}</span> рублей.</p>
+
+{% endblock %}
