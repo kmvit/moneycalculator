@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1 class="cover-heading">Выбирите калькулятор</h1>
+    <p class="lead">Я посчитаю вам все, захотите.</p>
+	<ul class="list-group text-left">
+		<li><a href="{{ url_for('jelanya') }}">Калькулятор желаний</a></li>
+		<li><a href="#">Калькулятор заработка</a></li>
+	</ul>
+{% endblock %}

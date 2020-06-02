@@ -16,8 +16,17 @@ def index():
 	return render_template('base.html', title='Home', context=context)
 
 
-@app.route('/calc/', methods=('GET', 'POST'))
-def calc():
+@app.route('/calc/')
+def calculator():
+	context = {
+
+	}
+	return render_template('calculator.html', title='Сборник желаний', context=context)
+
+
+
+@app.route('/jelaniya/', methods=('GET', 'POST'))
+def jelanya():
 	form = CalculatorForm()
 	if form.validate_on_submit():
 		return redirect(url_for('result'))

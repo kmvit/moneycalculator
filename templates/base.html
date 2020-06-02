@@ -53,7 +53,7 @@
       <h3 class="masthead-brand">Простая арифметика</h3>
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link active" href="/">Главная</a>
-	      <a class="nav-link" href="{{ url_for('calc')}}">Калькулятор</a>
+	      <a class="nav-link" href="{{ url_for('jelanya')}}">Калькулятор</a>
         <a class="nav-link" href="#">Контакты</a>
       </nav>
     </div>
@@ -64,7 +64,7 @@
     <h1 class="cover-heading">Простая арифметика</h1>
     <p class="lead">Хочешь узнать сколько нужно зарабатывать чтобы купить то, что ты хочешь?</p>
     <p class="lead">
-      <a href="/calc" class="btn btn-lg btn-secondary">Узнать</a>
+      <a href="{{ url_for('calculator') }}" class="btn btn-lg btn-secondary">Узнать</a>
     </p>
 	  {% endblock %}
   </main>
